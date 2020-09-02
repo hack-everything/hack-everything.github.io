@@ -9,7 +9,7 @@
 body {
     background-image: linear-gradient(120deg, rgba(255,40,40,1) 11%, rgba(140,68,255,1) 69%, rgba(23,161,233,1) 92%);
     color: black;
-    font-family: 'MuseoModerno', cursive;
+    font-family: 'MuseoModerno', sans-serif;
     min-height: 100vh;
 }
 
