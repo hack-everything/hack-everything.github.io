@@ -11,6 +11,8 @@ body {
     color: black;
     font-family: 'MuseoModerno', sans-serif;
     min-height: 100vh;
+    align-items: right;
+    justify-content: right;
 }
 
 header {
