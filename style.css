@@ -1,4 +1,3 @@
-
 *{
     margin: 0;
     padding: 0;
@@ -7,7 +6,7 @@
 
 
 body {
-    background-image: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    background-image: linear-gradient(120deg, rgba(255,40,40,1) 11%, rgba(140,68,255,1) 69%, rgba(23,161,233,1) 92%);
     color: black;
     font-family: 'MuseoModerno', sans-serif;
     min-height: 100vh;
