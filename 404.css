@@ -7,7 +7,7 @@
 
 
 body {
-    background-image: #3362ff;
+    background-color: #3362ff;
     color: white;
     font-family: 'Source Code Pro', monospace;
     min-height: 100vh;
@@ -21,4 +21,9 @@ header {
     justify-content: right;
     align-items: right;
 
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }
