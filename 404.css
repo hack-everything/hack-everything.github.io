@@ -27,3 +27,8 @@ a {
     color: white;
     text-decoration: none;
 }
+
+img {
+    justify-content: right;
+    align-items: right;
+}
