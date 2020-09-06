@@ -1,105 +1,122 @@
 <!DOCTYPE html>
 <html>
 
-    <head> 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet"  href="./index.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
-        <!-- fuck html sanitisation even though I have like 4 tools to sanitise this shit-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css" integrity="sha512-EaaldggZt4DPKMYBa143vxXQqLq5LE29DG/0OoVenoyxDrAScYrcYcHIuxYO9YNTIQMgD8c8gIUU8FQw7WpXSQ==" crossorigin="anonymous" />
-        <link rel='favicon' href='https://doggo.ninja/HnsZCc.png'>
-        <link rel='icon' href='https://doggo.ninja/HnsZCc.png'>
-        <link rel='shortcut icon' href='https://doggo.ninja/HnsZCc.png'>
-        <title>( ._.)</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="./404.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <!-- fuck html sanitisation even though I have like 4 tools to sanitise this shit-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css" integrity="sha512-EaaldggZt4DPKMYBa143vxXQqLq5LE29DG/0OoVenoyxDrAScYrcYcHIuxYO9YNTIQMgD8c8gIUU8FQw7WpXSQ==" crossorigin="anonymous" />
+    <link rel='favicon' href='https://doggo.ninja/HnsZCc.png'>
+    <link rel='icon' href='https://doggo.ninja/HnsZCc.png'>
+    <link rel='shortcut icon' href='https://doggo.ninja/HnsZCc.png'>
+    <title>( ._.)</title>
+</head>
 
 
-    <body>  
+<body>
 
-        <header>( ._.)</header>
-        <br>
-        <h1> 
-            I don't know WHAT the fuck is going on here
-        </h1>
+<header>( ._.)</header>
+<br>
+<br>
+<h1>
+    I don't know WHAT the fuck is going on here
+</h1>
 
-        <br> 
+<br>
 
-        <h2>
-            Good luck searching for it online though.
-        </h2> 
+<h2>
+    Good luck searching for it online though.
+</h2>
 
-        <br>
+<br>
 
-        <h2>  
-            Here's a useless number that Google has no results for. Try Bing.
+<h2>
+    Here's a useless number that Google has no results for. Try Bing.
 
-        </h2>
-        <br>
-        <br>
-        <br>
-        
-        <h1>
-            404
-        </h1>
+</h2>
+<br>
+<br>
+<h2>This page is reloading, please wait.</h2>
+<br>
 
-        <script type="text/javascript">
-            var count = 60;
-            var redirect = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-             
-            function countDown(){
-                var timer = document.getElementById("timer");
-                if(count > 0){
-                    count--;
-                    setTimeout("countDown()", 60);
-                }
-                else{
-                    window.location.href = redirect;
-                }
-            }
-            </script>
+<header>
+    404
+</header>
+<br>
+<br>
+<br>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<h2><span id="seconds"></span>% till reload <span></span></h2>
+<br>
+<br>
+<br>
+<img alt="" src="https://doggo.ninja/bAnfy0.png"
+     width=120" height="120">
 
-            <span id="timer">
+<script src="script.js"></script>
+
+
+<script type="text/javascript">
+    var count = 200;
+    var redirect = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+
+    function countDown(){
+        var timer = document.getElementById("timer");
+        if(count > 0){
+            count--;
+            setTimeout("countDown()", 200);
+        }
+        else{
+            window.location.href = redirect;
+        }
+    }
+</script>
+
+<span id="timer">
             <script type="text/javascript">countDown();</script>
             </span>
 
-        <footer>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-            
-            <p><a href="https://def-not-hacking-the.net">&#169; 2020-Present, Sourfruit, All Rights Reserved.</a></p>
-        </footer>
+
+
+<footer>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <p><a href="https://def-not-hacking-the.net">&#169; 2020-Present, Sourfruit, All Rights Reserved.</a></p>
+</footer>
 
 
 
-    </body>
+</body>
 
 
 
-</html> 
+</html>
