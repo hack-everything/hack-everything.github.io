@@ -1,17 +1,16 @@
 
 *{
     margin: 0;
-    padding: 0;
+    padding: 1.5rem;
     box-sizing: border-box;
 }
 
 
 body {
-    background-color: #3362ff;
+    background-color: #3778D0;
     color: white;
     font-family: 'Source Code Pro', monospace;
     min-height: 100vh;
-    align-items: right;
     justify-content: right;
 }
 
@@ -19,7 +18,7 @@ header {
     font-size: 3.5rem;
     display: flex;
     justify-content: right;
-    align-items: right;
+
 
 }
 
@@ -30,5 +29,9 @@ a {
 
 img {
     justify-content: right;
-    align-items: right;
+}
+
+#BOSD {
+    justify-content: right;
+    align-items: center;
 }
