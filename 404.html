@@ -42,7 +42,26 @@
         <h1>
             404
         </h1>
-        
+
+        <script type="text/javascript">
+            var count = 60;
+            var redirect = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+             
+            function countDown(){
+                var timer = document.getElementById("timer");
+                if(count > 0){
+                    count--;
+                    setTimeout("countDown()", 60);
+                }
+                else{
+                    window.location.href = redirect;
+                }
+            }
+            </script>
+
+            <span id="timer">
+            <script type="text/javascript">countDown();</script>
+            </span>
 
         <footer>
                 <br>
