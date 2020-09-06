@@ -4,3 +4,6 @@ setInterval( function(){
     $("#seconds").html(pad(++sec%60));
     $("#minutes").html(pad(parseInt(sec/60,10)));
 }, 1000);
+
+
+console.log('')
