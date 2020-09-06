@@ -39,9 +39,8 @@ banner {
     }
 
 
-    /* Links */
     a {
-        color: white;
+        color: greenyellow;
     }
 
     a:hover {
@@ -49,3 +48,9 @@ banner {
     }
 }
 
+#computer-con {
+    color: greenyellow;
+}
+#sourfruit {
+    color: greenyellow;
+}
