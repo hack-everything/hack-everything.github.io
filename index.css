@@ -1,0 +1,60 @@
+body {
+    font-size: 16px;
+    font-family: monospace;
+    color: greenyellow;
+    background: black;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+banner {
+    font-size: 16px;
+    font-family: monospace;
+    color: white;
+    text-align: center;
+}
+
+
+
+@media screen and (min-width: 900px) {
+    body {
+        font-size: 16px;
+        font-family: monospace;
+        color: greenyellow;
+        background: #222222;
+    }
+
+    banner {
+        font-size: 16px;
+        font-family: monospace;
+        color: white;
+    }
+
+
+    ::placeholder {
+        color: greenyellow;
+    }
+
+
+    a {
+        color: greenyellow;
+    }
+
+    a:hover {
+        COLOR: greenyellow;
+    }
+}
+
+#computer-con {
+    color: greenyellow;
+}
+#sourfruit {
+    color: greenyellow;
+}
+
+#header1 {
+    font-size: 40px
+}
