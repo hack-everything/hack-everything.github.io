@@ -21,34 +21,19 @@ banner {
 
 
 
-@media screen {
-    body {
-        font-size: 16px;
-        font-family: monospace;
-        color: greenyellow;
-        background: #222222;
-    }
-
-    banner {
-        font-size: 16px;
-        font-family: monospace;
-        color: white;
-    }
-
-
-    ::placeholder {
-        color: greenyellow;
-    }
-
-
-    a {
-        color: greenyellow;
-    }
-
-    a:hover {
-        COLOR: greenyellow;
-    }
+::placeholder {
+    color: greenyellow;
 }
+
+
+a {
+    color: greenyellow;
+}
+
+a:hover {
+    color: greenyellow;
+}
+
 
 #computer-con {
     color: greenyellow;
