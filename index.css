@@ -34,16 +34,12 @@ a:hover {
     color: greenyellow;
 }
 
-div {
-    height: 200px;
-    width: 400px;
-    background: black;
-
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -100px;
-    margin-left: -200px;
+#content {
+    max-width: 1000px;
+    margin: auto;
+    left: 1%;
+    right: 1%;
+    position: absolute;
 }
 
 #computer-con {
