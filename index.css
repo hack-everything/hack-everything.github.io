@@ -38,6 +38,7 @@ a:hover {
 #content {
     max-width: 1000px;
     margin: auto;
+    right: 1%;
     padding: 0;
 }
 
