@@ -6,6 +6,7 @@ body {
     color: greenyellow;
     background: #222222;
     text-align: center;
+    padding: 0;
 }
 
 footer {
@@ -39,7 +40,8 @@ a:hover {
     margin: auto;
     left: 1%;
     right: 1%;
-    position: absolute;
+
+    padding: 0;
 }
 
 #computer-con {
