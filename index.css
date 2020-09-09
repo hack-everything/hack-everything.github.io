@@ -20,7 +20,19 @@ banner {
 }
 
 
-#computer-con {
+::placeholder {
+    
+    color: greenyellow;
+}
+
+
+a {
+    color: greenyellow;
+    
+}
+    
+
+a:hover {
     color: greenyellow;
 }
 
