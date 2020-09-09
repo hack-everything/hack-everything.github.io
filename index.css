@@ -20,19 +20,37 @@ banner {
 }
 
 
-::placeholder {
-    
-    color: greenyellow;
+
+@media screen and (min-width: 600px) {
+    body {
+        font-size: 16px;
+        font-family: monospace;
+        color: greenyellow;
+        background: #222222;
+    }
+
+    banner {
+        font-size: 16px;
+        font-family: monospace;
+        color: white;
+    }
+
+
+    ::placeholder {
+        color: greenyellow;
+    }
+
+
+    a {
+        color: greenyellow;
+    }
+
+    a:hover {
+        COLOR: greenyellow;
+    }
 }
 
-
-a {
-    color: greenyellow;
-    
-}
-    
-
-a:hover {
+#computer-con {
     color: greenyellow;
 }
 
@@ -44,10 +62,4 @@ a:hover {
 
 #header1 {
     font-size: 40px
-}
-
-
-#secret a {
-    color: greenyellow;
-    text-decoration: none;
 }
