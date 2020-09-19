@@ -1,0 +1,47 @@
+
+header {
+    text-align: center;
+    font-size: 100px;
+}
+body {
+    font-family: 'Spinnaker', sans-serif;
+    background-color: white;
+
+
+}
+
+#content img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+a {
+    color: red;
+}
+
+a:hover {
+    color: red;
+}
+
+#tag-line h1 {
+    position: absolute;
+    text-align: center;
+}
+
+banner {
+    font-size: 1.5rem;
+}
+
+#learnmore center {
+    text-align: right;
+}
+
+h5 {
+    color: gray;
+}
+
+#countdown p {
+    text-align: center;
+    position: absolute;
+}

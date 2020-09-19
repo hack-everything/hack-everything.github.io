@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+
+    <meta name="description" content="Rent A Pi's website page. Rent Raspberry Pi 0s/3s for $5/7 a month."/>
+    <meta name="keywords" content="Rent Pis, Raspberry Pi Rental, Pi 3, Pi 0, Rent A Pi, RentAPi.us"/>
+    <meta name="author" content="Sourfruit / Indy"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177372353-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-177372353-1');
+    </script>
+    <title>Rent a Pi</title>
+    <link rel="stylesheet" type="text/css" href="pi.css">
+</head>
+<body>
+<header>RentAPi</header>
+<banner id="bar">
+    <center>
+
+        <a href="https://def-not-hacking-the.net/rent-a-pi.html">Home</a>  |  <a href="mailto:hello@def-not-hacking-the.net?Subject=RentAPi" target="_top">Contact</a>  | <a href="https://def-not-hacking-the.net/tos.html">Legal</a>
+    </center>
+</banner>
+<div id="content">
+    <img src="logo.png" alt="Logo" width="230" height="220"/>
+</div>
+
+
+<!--
+<div id="pi3">
+    <center>
+        <img src="Images/pi3.png" alt="pi3" width="400" height="400"/>
+    </center>
+</div>
+-->
+<center>
+    <br>
+    <br>
+    <h1><p id="countdown"></p></h1>
+
+</center>
+
+
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Oct 14, 2020").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="demo"
+        document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s " + "till launch";
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("coutdown").innerHTML = "LAUNCHED";
+        }
+    }, 1000);
+</script>
+
+<br>
+<br>
+<center>
+    <h1 id="tag-line"> Rasberry Pi Hosting. Low cost, Reliable, Best in its class. <a href="https://def-not-hacking-the.net/lm-pi.html">Learn More</a></h1>
+</center>
+
+<script src="pi.js"></script>
+</body>
+</html>
