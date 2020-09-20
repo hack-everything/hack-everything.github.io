@@ -16,64 +16,62 @@
         gtag('js', new Date());
         gtag('config', 'UA-177372353-1');
     </script>
+    <link rel='favicon' href='https://doggo.ninja/7vNsr4.png'>
+    <link rel='icon' href='https://doggo.ninja/7vNsr4.png'>
+    <link rel='shortcut icon' href='https://doggo.ninja/7vNsr4.png'>
     <title>Rent a Pi</title>
     <link rel="stylesheet" type="text/css" href="pi.css">
 </head>
 <body>
-<header>RentAPi</header>
-<banner id="bar">
-    <center>
 
-        <a href="https://def-not-hacking-the.net/rent-a-pi.html">Home</a>  |  <a href="mailto:hello@def-not-hacking-the.net?Subject=RentAPi" target="_top">Contact</a>  | <a href="https://def-not-hacking-the.net/tos.html">Legal</a>
-    </center>
-</banner>
+<div class="hero-image">
+    <div class="hero-text">
+        <header>RentAPi</header>
+        <center>
+            <banner class="bar">
+                <a href="https://def-not-hacking-the.net/rent-a-pi.html"> <button class="button1">Home</button></a> <a href="mailto:hello@def-not-hacking-the.net?Subject=RentAPi" target="_top"> <button class="button1">Contact</button></a> <a href="https://def-not-hacking-the.net/tos.html"> <button class="button1">Legal</button></a>
+            </banner>
+                <br>
+                <br>
+                <h1><p id="countdown"></p></h1>
+        </center>
+
+    </div>
+</div>
+
+
+
 <div id="content">
     <img src="logo.png" alt="Logo" width="230" height="220"/>
 </div>
 
 
-<!--
-<div id="pi3">
-    <center>
-        <img src="Images/pi3.png" alt="pi3" width="400" height="400"/>
-    </center>
-</div>
--->
-<center>
-    <br>
-    <br>
-    <h1><p id="countdown"></p></h1>
-
-</center>
-
 
 <script>
-    // Set the date we're counting down to
+
     var countDownDate = new Date("Oct 14, 2020").getTime();
 
-    // Update the count down every 1 second
+
     var x = setInterval(function() {
 
-        // Get today's date and time
+
         var now = new Date().getTime();
 
-        // Find the distance between now and the count down date
         var distance = countDownDate - now;
 
-        // Time calculations for days, hours, minutes and seconds
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Display the result in the element with id="demo"
+
         document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
             + minutes + "m " + seconds + "s " + "till launch";
 
-        // If the count down is finished, write some text
+
         if (distance < 0) {
             clearInterval(x);
-            document.getElementById("coutdown").innerHTML = "LAUNCHED";
+            document.getElementById("coutdown").innerHTML = "RentAPi has launched. Please wait until the site updates.";
         }
     }, 1000);
 </script>
@@ -81,23 +79,36 @@
 <br>
 <br>
 <center>
-    <h1 id="tag-line"> Rasberry Pi Hosting. Low cost, Reliable, Best in its class. <a href="https://def-not-hacking-the.net/lm-pi.html">Learn More</a></h1>
+    <h1 id="tag-line"> Rasberry Pi Hosting. Low cost, Reliable, Best in its class.</h1> <!-- <a href="https://def-not-hacking-the.net/lm-pi.html">Learn More</a></h1> -->
 </center>
-
+<center>
+    <a href="lm-pi.html">
+        <button class="button1">Learn More</button>
+    </a>
+</center>
 <script src="pi.js"></script>
 <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <center>
     <footer>
         <p>&#169; 2020-Present, RentAPi, All Rights Reserved.</p>
