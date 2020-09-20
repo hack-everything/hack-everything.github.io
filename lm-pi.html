@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-
+    <meta name="viewport" content="width=1500">
     <meta name="description" content="Rent A Pi's website page. Rent Raspberry Pi 0s/3s for $5/7 a month."/>
     <meta name="keywords" content="Rent Pis, Raspberry Pi Rental, Pi 3, Pi 0, Rent A Pi, RentAPi.us"/>
     <meta name="author" content="Sourfruit / Indy"/>
@@ -23,7 +23,6 @@
     <link rel="stylesheet" type="text/css" href="pi.css">
 </head>
 <body>
-
 <div class="hero-image">
     <div class="hero-text">
         <header>RentAPi</header>
@@ -31,9 +30,9 @@
             <banner class="bar">
                 <a href="https://def-not-hacking-the.net/rent-a-pi.html"> <button class="button1">Home</button></a> <a href="mailto:hello@def-not-hacking-the.net?Subject=RentAPi" target="_top"> <button class="button1">Contact</button></a> <a href="https://def-not-hacking-the.net/tos.html"> <button class="button1">Legal</button></a>
             </banner>
-                <br>
-                <br>
-                <h1><p id="countdown"></p></h1>
+            <br>
+            <br>
+            <h1><p id="countdown"></p></h1>
         </center>
 
     </div>
@@ -45,66 +44,31 @@
     <img src="logo.png" alt="Logo" width="230" height="220"/>
 </div>
 
+<br>
+<br>
+<center id="learnmore">
+    <h1>
+        We are RentAPi. A Raspberry Pi hosting service. Since what's out there isn't good enough.
+        Built for all. Software developers, makers, and even companies. We take pride in our low prices and ease
+        of use. Use us for hosting your website, APIs, email, anything you can think of.
+    </h1>
 
+    <h1> We provide two different options. 3 Raspberry Pi Zeros. Perfect for small projects, just for $5 a month!*
+         Or, 3 Raspberry Pi 3s perfect for just about anything, just for $7 a month.*
+    </h1>
 
-<script>
-
-    var countDownDate = new Date("Oct 14, 2020").getTime();
-
-
-    var x = setInterval(function() {
-
-
-        var now = new Date().getTime();
-
-        var distance = countDownDate - now;
-
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-
-        document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-            + minutes + "m " + seconds + "s " + "till launch";
-
-
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("coutdown").innerHTML = "RentAPi has launched. Please wait until the site updates.";
-        }
-    }, 1000);
-</script>
+</center>
 
 <br>
 <br>
-<center>
-    <h1 id="tag-line"> Rasberry Pi Hosting. Low cost, Reliable, Best in its class.</h1> <!-- <a href="https://def-not-hacking-the.net/lm-pi.html">Learn More</a></h1> -->
-</center>
-<center>
-    <a href="lm-pi.html">
-        <button class="button1">Learn More</button>
-    </a>
-</center>
+<br>
+<br>
+<br>
+<br>
+<h5>*Pi 0 = $5 a month, for the first 2 months, $6.99 after.</h5>
+<h5>*Pi 3 = $7 a month, for the first 2 months, $9.99 after.</h5>
+
 <script src="pi.js"></script>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <br>
 <br>
 <br>
@@ -114,8 +78,6 @@
         <p>&#169; 2020-Present, RentAPi, All Rights Reserved.</p>
         <h5>This web site is not endorsed by, directly affiliated with, maintained, authorized, or sponsored by The Raspberry Pi Foundation. All product and company names are the registered trademarks of their original owners.</h5>
     </footer>
-
-
 </center>
 </body>
 </html>
