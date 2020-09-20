@@ -3,7 +3,7 @@ body, html {
 }
 
 .hero-image {
-    background-image: url("Images/banner.png");
+    background-image: url("banner.png");
     height: 25%;
 
     background-position: center;
