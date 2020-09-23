@@ -11,7 +11,7 @@ loginButton.addEventListener("click", (e) => {
     if (username === "rentapi" && password === "9zttKHYv7h") {
         alert("You have successfully logged in.");
         location.reload();
-        window.location.href = "https://sourfruit.design/files.html";
+        window.location.href = "https://def-not-hacking-the.net/dashboard.html";
     } else {
         loginErrorMsg.style.opacity = 1;
     }
