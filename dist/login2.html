@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <title>Login</title>
   <link rel="stylesheet" href="./style.css">
-
+  <script defer src="login2.js"></script>
 </head>
 <body>
 
-<form autocomplete='off' class='form'>
+<form id="login-form" autocomplete='off' class='form'>
   <div class='control'>
     <h1>
       Sign In
     </h1>
   </div>
   <div class='control block-cube block-input'>
-    <input name='username' placeholder='Username' type='text'>
+    <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
     <div class='bg-top'>
       <div class='bg-inner'></div>
     </div>
@@ -27,7 +27,7 @@
     </div>
   </div>
   <div class='control block-cube block-input'>
-    <input name='password' placeholder='Password' type='password'>
+    <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
     <div class='bg-top'>
       <div class='bg-inner'></div>
     </div>
@@ -38,7 +38,7 @@
       <div class='bg-inner'></div>
     </div>
   </div>
-  <button class='btn block-cube block-cube-hover' type='button'>
+  <button class='btn block-cube block-cube-hover' type="submit" value="Login" id="login-form-submit">
     <div class='bg-top'>
       <div class='bg-inner'></div>
     </div>
