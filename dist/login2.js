@@ -9,12 +9,14 @@ loginButton.addEventListener("click", (e) => {
     const username = loginForm.username.value;
     const password = loginForm.password.value;
 
-    if (username === "sourfruit" && password === "~$:sourfruit") {
+    if (username === "sourfruit" && password === "sourfruit99") {
         console.log(username);
         alert("You have successfully logged in.");
         location.reload();
-        window.location.href = "https://sourfruit.design/files.html";
-    } else {
+        window.location.href = "https://def-not-hacking-the.net/dashboard";
+    }
+
+    else {
         loginErrorMsg.style.opacity = 1;
     }
 })
