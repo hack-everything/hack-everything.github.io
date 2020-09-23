@@ -8,7 +8,7 @@ loginButton.addEventListener("click", (e) => {
     const username = loginForm.username.value;
     const password = loginForm.password.value;
 
-    if (username === "rentapi" && password === "9zttKHYv7h") {
+    if (username === "sourfruit" && password === "sourfruit99") {
         alert("You have successfully logged in.");
         location.reload();
         window.location.href = "https://def-not-hacking-the.net/dashboard.html";
