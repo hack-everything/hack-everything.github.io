@@ -82,6 +82,21 @@
     </footer>
 
 </div>
+    
+<script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
+<script>
+    function SaveAsFile(t,f,m) {
+        try {
+            var b = new Blob([t],{type:m});
+            saveAs(b, f);
+        } catch (e) {
+            window.open("data:"+m+"," + encodeURIComponent(t), '_blank','');
+        }
+    }
+
+    SaveAsFile("T2ggaGVsbG8gdGhlcmUhIFlvdSdyZSBhdCB0aGUgc3RhcnQgb2Ygc29tZXRoaW5nIGdyZWF0LiBUaGlzIGlzIGVuY29kZWQgaW4gQmFzZTY0IGJ0dyA6KS4gCgoKCgoKSSBoZWFyZCAiaHR0cHM6Ly90aGUtdGVzdGluZy1mb25kLmdpdGh1Yi5pbyIgaXMgYSBnb29kIHNpdGUgdG8gY2hlY2s/","notyetsecret.txt","text/plain;charset=utf-8");
+
+</script>
 </body>
 
 </html>
