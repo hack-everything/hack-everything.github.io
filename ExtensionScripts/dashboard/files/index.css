@@ -1,0 +1,90 @@
+/* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
+
+body {
+    font-size: 16px;
+    font-family: monospace;
+    color: greenyellow;
+    background: #222222;
+    text-align: center;
+    padding: 0;
+}
+
+footer {
+    text-align: center;
+}
+
+banner {
+    font-size: 16px;
+    font-family: monospace;
+    color: white;
+    text-align: center;
+}
+
+
+
+::placeholder {
+    color: greenyellow;
+}
+
+
+a {
+    color: greenyellow;
+}
+
+a:hover {
+    color: greenyellow;
+}
+
+#content {
+    max-width: 1000px;
+    margin: auto;
+    right: 2%;
+    padding: 0;
+}
+
+#computer-con {
+    color: greenyellow;
+}
+
+
+#sourfruit {
+    color: greenyellow;
+}
+
+
+#header1 {
+    font-size: 40px
+}
+
+button {
+    color: greenyellow;
+    background-color: #222222;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 12px;
+    padding: 12px 28px;
+    font-size: 16px;
+}
