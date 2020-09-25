@@ -13,7 +13,7 @@ loginButton.addEventListener("click", (e) => {
         console.log(username);
         alert("You have successfully logged in.");
         location.reload();
-        window.location.href = "https://def-not-hacking-the.net/dashboard";
+        window.location.href = "https://def-not-hacking-the.net/dashboard/65849687584939856765904.html";
     }
 
     else {
