@@ -1,0 +1,979 @@
+* {
+    vertical-align: baseline;
+    font-weight: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    tap-highlight-color: rgba(0,0,0,0);
+}
+
+input{
+    appearance:initial;
+}
+
+.wrapper{
+    position: relative;
+    display: block;
+    width: 96vw;
+    height: 72vw;
+    min-width: 320px;
+    min-height: 240px;
+    margin: 10px auto;
+    overflow: hidden;
+    background-color: #ececec;
+    box-sizing:border-box;
+    user-select: none;
+}
+
+.giftcard{
+    position: absolute;
+    width: 79%;
+    height: 72%;
+    top: 50.5%;
+    left: 50%;
+    margin-left: -39.5%;
+    margin-top: -27%;
+    perspective: 1000px;
+    font-family: 'Tahoma';
+}
+
+.giftcard .card{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    border-radius: 5%/6.67%;
+    background-color: rgba(255,255,255,1);
+    box-shadow: 0 0 5vw rgba(100,100,100,0.5);
+}
+
+.giftcard .front, .giftcard .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%/6.67%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+.giftcard button{
+    color:#fff;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.giftcard .front .banner, .giftcard .back .detail{
+    height: 66%;
+    overflow: hidden;
+}
+
+.giftcard .info, .giftcard .operation{
+    height: 34%;
+    position: relative;
+}
+
+.giftcard .front .buy, .giftcard .back .checkout, .giftcard .back .gift, .giftcard .back .msg{
+    position: absolute;
+    right: 5.5%;
+    top: 20%;
+    height: 56%;
+    border-radius: 10%/13.5%;
+}
+
+.giftcard .front .buy button:active, .giftcard .back .checkout:active{
+    animation: btn-active 0.2s;
+}
+
+@keyframes btn-active{
+    0% { transform: scale(1);}
+    50% { transform: scale(0.9);}
+    100% { transform: scale(1);}
+}
+
+/** for front **/
+.giftcard .front .banner{
+    position: relative;
+}
+
+.giftcard .front .banner .logo-bg{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform-origin: 50% 100%;
+    background-color: rgb(230,0,150);
+    border-radius: 5% 5% 0 0/10% 10% 0 0;
+    background-image:
+            radial-gradient(
+                    140% 160% at 110% 70%,
+                    rgba(140,0,155, 1),
+                    rgba(230,0,150,0)
+            );
+}
+
+/* wave */
+.giftcard .front .wave{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.giftcard .front .wave *,
+.giftcard .front .wave *::before,
+.giftcard .front .wave *::after{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+}
+
+.giftcard .front .wave *::before,
+.giftcard .front .wave *::after{
+    content:'';
+}
+
+.giftcard .front .wave-bk{
+    width: 120%;
+    height: 75%;
+}
+
+.giftcard .front .wave-bk span::before,
+.giftcard .front .wave-bk span::after{
+    background-image:radial-gradient(
+            85% 85% at 50% 75%,
+            rgba(206,33,156,0.6) 0%,
+            rgba(206,33,156,0.6) 70%,
+            rgba(206,33,156,0) 70%
+    );
+}
+
+.giftcard .front .wave-bk span::before{
+    left: -100%;
+}
+
+.giftcard .front .wave-bk span::after{
+    left: 100%;
+}
+
+.giftcard .front .wave-bk::before,
+.giftcard .front .wave-bk::after{
+    background-image:radial-gradient(
+            85% 85% at 50% 10%,
+            rgba(206,33,156,0) 0%,
+            rgba(206,33,156,0) 70%,
+            rgba(206,33,156,0.6) 70%
+    );
+}
+
+.giftcard .front .wave-bk::after{
+    left: 200%;
+}
+
+.giftcard .front .wave-fr{
+    width: 110%;
+    height: 75%;
+}
+
+.giftcard .front .wave-fr span::before,
+.giftcard .front .wave-fr span::after{
+    background-image:radial-gradient(
+            90% 90% at 50% 10%,
+            rgba(206,33,156,0) 0%,
+            rgba(206,33,156,0) 70%,
+            rgba(206,33,156,0.6) 70%
+    );
+}
+
+.giftcard .front .wave-fr span::before{
+    left: -100%;
+}
+
+.giftcard .front .wave-fr span::after{
+    left: 100%;
+}
+
+.giftcard .front .wave-fr::before,
+.giftcard .front .wave-fr::after{
+    background-image:radial-gradient(
+            90% 90% at 50% 87%,
+            rgba(206,33,156,0.6) 0%,
+            rgba(206,33,156,0.6) 70%,
+            rgba(206,33,156,0) 70%
+    );
+}
+
+.giftcard .front .wave-fr::after{
+    left: 200%;
+}
+
+/* logo */
+.giftcard .front .logo{
+    position: absolute;
+    width: 16vw;
+    height: 16vw;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* apple logo */
+.apple{
+    font-family: FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.apple::after{
+    display: block;
+    content: "\f179";
+    color: #fff;
+    font-size: 16vw;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    line-height: 16vw;
+}
+
+/* front list */
+.giftcard .front .list{
+    top: 18%;
+    left: 5%;
+    position: absolute;
+    width: 60%;
+}
+
+.giftcard .info .title{
+    font-size: 5vw;
+    color : #ce36a0;
+}
+
+.giftcard .front .price{
+    font-size: 4vw;
+    color: #939393;
+}
+
+/* fr button */
+.giftcard .front .buy{
+    width: 19%;
+    font-size: 4vw;
+}
+
+.giftcard .front .buy button{
+    position: absolute;
+    background-color: #f29800;
+    border-radius: 10%/13.5%;
+}
+
+.giftcard .buy .btn-bk,
+.giftcard .buy .btn-fr,
+.giftcard .gift .btn-fr{
+    position: absolute;
+    width: 140%;
+    height: 160%;
+    top:51%;
+    left:50%;
+    overflow: hidden;
+    border-radius: 0;
+    transform: translate3d(-50%,-50%,0);
+}
+
+.giftcard .buy .btn-fr{
+    transform: translate3d(-150%,-50%,0);
+}
+
+.giftcard .buy .btn-bk *,
+.giftcard .buy .btn-fr *,
+.giftcard .buy .btn-bk *::before,
+.giftcard .buy .btn-bk *::after,
+.giftcard .buy .btn-fr *::before,
+.giftcard .buy .btn-fr *::after,
+.giftcard .gift .btn-fr *,
+.giftcard .gift .btn-fr *::before,
+.giftcard .gift .btn-fr *::after{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content:'';
+    display: block;
+}
+
+.giftcard .buy .btn-bk .paper{
+    width: 87.57%;
+    height: 112%;
+    background: #be0000;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0) rotateZ(45deg) scale(0.35);
+}
+
+.giftcard .buy .btn-fr .paper::before,
+.giftcard .buy .btn-fr .paper::after,
+.giftcard .buy .btn-fr .paper span::before,
+.giftcard .buy .btn-fr .paper span::after{
+    width: 62.55%;
+    height: 80%;
+    background-color: rgba(255,24,41,1);
+}
+
+.giftcard .buy .btn-fr .paper::before{
+    top:50%;
+    left: 50%;
+    transform:translateX(-200%) translateY(-50%) rotateZ(45deg);
+}
+
+.giftcard .buy .btn-fr .paper::after{
+    top:50%;
+    left: 50%;
+    transform:translateX(100%) translateY(-50%) rotateZ(45deg);
+}
+
+.giftcard .buy .btn-fr .paper span::before{
+    top:50%;
+    left: 50%;
+    transform:translateX(-50%) translateY(-185%) rotateZ(45deg);
+}
+
+.giftcard .buy .btn-fr .paper span::after{
+    top:50%;
+    left: 50%;
+    transform:translateX(-50%) translateY(85%) rotateZ(45deg);
+}
+
+.giftcard .buy .btn-bk .mask, .giftcard .buy .btn-fr .mask{
+    background-image:
+            linear-gradient(
+                    90deg,
+                    rgba(255,255,255,1) 0%,
+                    rgba(255,255,255,1) 22%,
+                    rgba(255,255,255,0) 22%,
+                    rgba(255,255,255,0) 78%,
+                    rgba(255,255,255,1) 78%,
+                    rgba(255,255,255,1) 100%
+            ),linear-gradient(
+                    0deg,
+                    rgba(255,255,255,1) 0%,
+                    rgba(255,255,255,1) 26.5%,
+                    rgba(255,255,255,0) 26.5%,
+                    rgba(255,255,255,0) 75.5%,
+                    rgba(255,255,255,1) 75.5%,
+                    rgba(255,255,255,1) 100%
+            );
+    transform-origin: 50% 50%;
+    transform: scale(2.1);
+}
+
+.giftcard .buy .btn-fr .bkbelt::before,
+.giftcard .buy .btn-fr .bkbelt::after,
+.giftcard .buy .btn-fr .bkbelt span::before,
+.giftcard .buy .btn-fr .bkbelt span::after{
+    background-color: #dd8c00;
+}
+
+.giftcard .buy .btn-fr .bkbelt::before,
+.giftcard .buy .btn-fr .bkbelt::after{
+    width: 8%;
+    height: 15%;
+    left: 35%;
+    transform: scaleY(0);
+}
+
+.giftcard .buy .btn-fr .bkbelt::before{
+    top: 80%;
+    transform-origin: 50% 0;
+}
+
+.giftcard .buy .btn-fr .bkbelt::after{
+    bottom: 82%;
+    transform-origin: 50% 100%;
+}
+
+.giftcard .buy .btn-fr .bkbelt span::before,
+.giftcard .buy .btn-fr .bkbelt span::after{
+    width: 15%;
+    height: 10%;
+    top: 35%;
+    transform: scaleX(0);
+}
+
+.giftcard .buy .btn-fr .bkbelt span::before{
+    left: 85%;
+    transform-origin: 0 50%;
+}
+
+.giftcard .buy .btn-fr .bkbelt span::after{
+    right: 85.5%;
+    transform-origin: 100% 50%;
+}
+
+.giftcard .btn-fr .gmask{
+    background-color: rgba(255,24,41,1);
+    transform-origin: 50% 48%;
+    transform: scaleX(0.72) scaleY(0.62);
+    border-radius: 10%/13.5%;
+}
+
+.giftcard .buy .btn-fr .gmask{
+    background-color: rgba(255,24,41,0);
+}
+
+/* ribbon */
+.giftcard .btn-fr .frbelt::before,
+.giftcard .btn-fr .frbelt::after,
+.giftcard .btn-fr .frbelt span::before,
+.giftcard .btn-fr .frbelt span::after{
+    background-color: #ffd600;
+}
+
+.giftcard .btn-fr .frbelt::before,
+.giftcard .btn-fr .frbelt::after{
+    width: 10%;
+    left: 34%;
+}
+
+.giftcard .btn-fr .frbelt::before{
+    height: 28%;
+    top: 18%;
+    transform-origin: 50% 0;
+}
+
+.giftcard .buy .btn-fr .frbelt::before{
+    transform: translateY(-55%) scaleY(0);
+}
+
+.giftcard .btn-fr .frbelt::after{
+    bottom: 20%;
+    height: 46%;
+    transform-origin: 50% 100%;
+}
+
+.giftcard .buy .btn-fr .frbelt::after{
+    transform: translateY(30%) scaleY(0);
+}
+
+.giftcard .btn-fr .frbelt span::before,
+.giftcard .btn-fr .frbelt span::after{
+    height: 12%;
+    top:34%;
+}
+
+.giftcard .btn-fr .frbelt span::before{
+    left:14%;
+    width:30%;
+    transform-origin: 0 50%;
+}
+
+.giftcard .buy .btn-fr .frbelt span::before{
+    transform: translateX(-46%) scaleX(0);
+}
+
+.giftcard .btn-fr .frbelt span::after{
+    right:14%;
+    width:52%;
+    transform-origin: 100% 50%;
+}
+
+.giftcard .buy .btn-fr .frbelt span::after{
+    transform: translateX(27%) scaleX(0);
+}
+
+/* bowknot */
+.giftcard .btn-fr .bowknot{
+    transform-origin: 39% 40%;
+}
+
+.giftcard .buy .btn-fr .bowknot{
+    transform: scale(0);
+}
+
+.giftcard .btn-fr .bowknot::before,
+.giftcard .btn-fr .bowknot::after,
+.giftcard .btn-fr .bowknot span::before,
+.giftcard .btn-fr .bowknot span::after{
+    position: absolute;
+}
+
+.giftcard .btn-fr .bowknot::after,
+.giftcard .btn-fr .bowknot span::after{
+    background-color: #ffd621;
+    width: 10%;
+    height: 24%;
+    bottom: 60%;
+    left: 34%;
+    transform-origin: 50% 100%;
+    box-shadow: 0 0 3px rgba(100,100,100,0.3);
+}
+
+.giftcard .btn-fr .bowknot::after{
+    transform: rotateZ(-67deg);
+}
+
+.giftcard .btn-fr .bowknot span::after{
+    transform: rotateZ(67deg);
+}
+
+.giftcard .btn-fr .bowknot::before,
+.giftcard .btn-fr .bowknot span::before{
+    background-image:
+            linear-gradient(
+                    45deg,
+                    rgba(255,214,22,0) 0%,
+                    rgba(255,214,22,0) 34%,
+                    rgba(255,214,22,1) 34%,
+                    rgba(255,214,22,1) 100%
+            ),linear-gradient(
+                    -45deg,
+                    rgba(255,214,22,0) 0%,
+                    rgba(255,214,22,0) 30%,
+                    rgba(255,214,22,1) 30%,
+                    rgba(255,214,22,1) 100%
+            );
+    width: 10%;
+    height: 25%;
+    top: 40%;
+    left: 34%;
+    transform-origin: 50% 0%;
+    box-shadow:0 -2px 2px rgba(100,100,100,0.5);
+}
+
+.giftcard .btn-fr .bowknot::before{
+    transform:translateX(-40%) rotateZ(45deg);
+}
+
+.giftcard .btn-fr .bowknot span::before{
+    transform:translateX(40%) rotateZ(-45deg);
+}
+
+.giftcard .btn-fr .knot::before{
+    position: absolute;
+    background-color: #ffe621;
+    border-radius: 50%;
+    width: 14%;
+    height: 18%;
+    top: 30%;
+    left: 31.5%;
+    box-shadow: 1px 1px 1px rgba(100,100,100,0.3);
+    transform-origin:50% 50%;
+}
+
+.giftcard .buy .btn-fr .knot::before{
+    transform:scale(0);
+}
+
+/** for back **/
+.giftcard .back{
+    transform:rotateX(180deg);
+}
+
+.giftcard .back .list{
+    margin: 5.5% 5.5% 0 5.5%;
+    height: 87.4%;
+    box-sizing:border-box;
+    border-bottom: 1px solid rgb(230,0,150);
+    font-size: 3.5vw;
+    color: #a5a5a5;
+}
+
+.giftcard .back .list p{
+    height: 3.8vw;
+    line-height: 3.8vw;
+}
+
+.giftcard .detail .title{
+    text-transform: uppercase;
+    color: #505050;
+}
+
+.giftcard .detail .name{
+    color: #555555;
+}
+
+.giftcard .back .checkout{
+    width: 21%;
+    font-size: 3.2vw;
+    background-color: #019def;
+}
+
+.giftcard .back .gift{
+    width: 19%;
+    background-color: #ff1a2a;
+    right: 75.5%;
+}
+
+.giftcard .back .msg{
+    border: 1px solid #cecece;
+    right: 29.7%;
+    width: 38%;
+    border-radius: 5%/13.5%;
+    font-size: 3.2vw;
+    padding: 0 2%;
+    color: #a5a5a5;
+}
+
+.giftcard .back input::-webkit-input-placeholder{
+    color: #dedede;
+}
+
+/* animation infinite */
+
+.giftcard .front .wave-bk{
+    transform:translateX(-10%);
+    animation: wave-move-left 15s linear infinite;
+}
+
+@keyframes wave-move-left {
+    0% {transform:translateX(-10%);}
+    100% {transform:translateX(-210%);}
+}
+
+.giftcard .front .wave-fr{
+    transform:translateX(-145%);
+    animation: wave-move-right 18s linear infinite;
+}
+
+@keyframes wave-move-right {
+    0% {transform:translateX(-145%);}
+    100% {transform:translateX(55%);}
+}
+
+/* animation show-front */
+.show-front .front{
+    transform: rotateX(0);
+    animation: stay-bgcolor 0.6s ease;
+}
+
+.show-front .back{
+    animation: stay-bgcolor 0.6s ease;
+}
+
+@keyframes stay-bgcolor {
+    0% {background-color: rgba(255,255,255,1);}
+    100% {background-color: rgba(255,255,255,1);}
+}
+
+.show-front .card{
+    animation: rotate-x 0.6s ease;
+}
+
+@keyframes rotate-x {
+    0% { transform: rotateX(180deg); background-color: rgba(255,255,255,0);}
+    70% { transform: rotateX(-12deg); }
+    100% { transform: rotateX(0deg); background-color: rgba(255,255,255,0);}
+}
+
+/* animation show-back front */
+.show-back .front{
+    transform: rotateX(180deg);
+    animation: stay-front 1.5s;
+}
+
+@keyframes stay-front{
+    0% { transform: rotateX(0);}
+    100% { transform: rotateX(0);}
+}
+
+.show-back .front .info{
+    animation: info-move-left 2s;
+}
+
+@keyframes info-move-left{
+    0% { transform: translateX(0); opacity: 1;}
+    50% { transform: translateX(0); opacity: 1;}
+    75% { transform: translateX(-70%); opacity: 0;}
+    100% { transform: translateX(-70%); opacity: 0;}
+}
+
+.show-back .front .banner .logo-bg{
+    animation: banner-move-hide 2s;
+}
+
+@keyframes banner-move-hide{
+    0% { transform: translateY(0%) scale(1);}
+    52% { transform: translateY(0%) scale(1);}
+    80% { transform: translateY(100%) scale(0.9);}
+    100% { transform: translateY(100%) scale(0.9);}
+}
+
+.show-back .front .btn-bk .paper{
+    animation: btn-bk-paper 2s;
+}
+
+@keyframes btn-bk-paper{
+    0% { transform: translate3d(-50%,-50%,0) rotateZ(45deg) scale(0.4); }
+    17% { transform: translate3d(-50%,-50%,0) rotateZ(45deg) scale(1); }
+    100% { transform: translate3d(-50%,-50%,0) rotateZ(45deg) scale(1); }
+}
+
+.show-back .front .btn-bk .mask{
+    animation: btn-bk-mask 2s;
+}
+
+@keyframes btn-bk-mask{
+    0% { transform: scale(2.1); }
+    6% { transform: scale(2.1); }
+    25% { transform: scale(1.3); }
+    100% { transform: scale(1.3); }
+}
+
+.show-back .front .btn-fr{
+    transform: translate3d(-50%,-50%,0);
+}
+
+.show-back .front .btn-fr .paper::before{
+    animation: paper-move-left 2s;
+}
+
+@keyframes paper-move-left{
+    7% { transform:translateX(-200%) translateY(-50%) rotateZ(45deg); }
+    16%{background-color: rgba(255,24,41,1);}
+    16.01% {background-color: rgba(255,24,41,0);}
+    23% { transform:translateX(-120%) translateY(-50%) rotateZ(45deg); }
+    100% { transform:translateX(-120%) translateY(-50%) rotateZ(45deg); background-color: rgba(255,24,41,0);}
+}
+
+.show-back .front .btn-fr .paper::after{
+    animation: paper-move-right 2s;
+}
+
+@keyframes paper-move-right{
+    7% { transform:translateX(100%) translateY(-50%) rotateZ(45deg); }
+    16% {background-color: rgba(255,24,41,1);}
+    16.01% {background-color: rgba(255,24,41,0);}
+    23% { transform:translateX(20%) translateY(-50%) rotateZ(45deg); }
+    100% { transform:translateX(20%) translateY(-50%) rotateZ(45deg); background-color: rgba(255,24,41,0);}
+}
+
+.show-back .front .btn-fr .paper span::before{
+    animation: paper-move-top 2s;
+}
+
+@keyframes paper-move-top{
+    4% { transform: translateX(-50%) translateY(-185%) rotateZ(45deg);}
+    16% {background-color: rgba(255,24,41,1);}
+    16.01% {background-color: rgba(255,24,41,0);}
+    20% { transform: translateX(-50%) translateY(-100%) rotateZ(45deg);}
+    100% { transform: translateX(-50%) translateY(-100%) rotateZ(45deg); background-color: rgba(255,24,41,0);}
+}
+
+.show-back .front .btn-fr .paper span::after{
+    animation: paper-move-bottom 2s;
+}
+
+@keyframes paper-move-bottom{
+    4% { transform: translateX(-50%) translateY(85%) rotateZ(45deg); }
+    16% {background-color: rgba(255,24,41,1);}
+    16.01% {background-color: rgba(255,24,41,0);}
+    20% { transform: translateX(-50%) translateY(0%) rotateZ(45deg);}
+    100% { transform: translateX(-50%) translateY(0%) rotateZ(45deg); background-color: rgba(255,24,41,0);}
+}
+
+.show-back .front .btn-fr .mask{
+    animation: btn-fr-mask 2s;
+}
+
+@keyframes btn-fr-mask{
+    0% { transform: scale(2.1); }
+    6% { transform: scale(2.1); }
+    17% { transform: scale(1.3); }
+    17.1% { transform: scale(1); }
+    100% { transform: scale(1); }
+}
+
+.show-back .front .btn-fr .gmask{
+    animation: btn-gmask 2s;
+}
+
+@keyframes btn-gmask{
+    0%{ border-radius: 0;}
+    16% { background-color: rgba(255,24,41,0); transform: scaleX(0.72) scaleY(0.62);}
+    16.01% {background-color: rgba(255,24,41,1);border-radius: 0; transform: scaleX(0.74) scaleY(0.64);}
+    20% {transform: scaleX(0.74) scaleY(0.64);}
+    22% {border-radius: 10%/13.5%; transform: scaleX(0.72) scaleY(0.62);}
+    100% { background-color: rgba(255,24,41,1); transform: scaleX(0.72) scaleY(0.62);}
+}
+
+.show-back .front .btn-fr .bkbelt::before,
+.show-back .front .btn-fr .bkbelt::after{
+    animation: bkbelt-v 2s;
+}
+
+@keyframes bkbelt-v{
+    12% { transform: scaleY(0); }
+    20% { transform: scaleY(1); }
+    28% { transform: scaleY(0); }
+}
+
+.show-back .front .btn-fr .bkbelt span::before,
+.show-back .front .btn-fr .bkbelt span::after{
+    animation: bkbelt-h 2s;
+}
+
+@keyframes bkbelt-h{
+    12% { transform: scaleX(0); }
+    20% { transform: scaleX(1); }
+    28% { transform: scaleX(0); }
+}
+
+.show-back .buy .btn-fr .frbelt::before{
+    animation: frbelt-top 2s;
+}
+
+@keyframes frbelt-top{
+    20% { transform: translateY(-55%) scaleX(1) scaleY(0); }
+    32% { transform: translateY(0) scaleX(1) scaleY(1); }
+    40% { transform: translateY(0) scaleX(0.9) scaleY(1); }
+    45% { transform: translateY(0) scaleX(1) scaleY(1); }
+    100% { transform: translateY(0) scaleX(1) scaleY(1); }
+}
+
+.show-back .buy .btn-fr .frbelt::after{
+    animation: frbelt-bottom 2s;
+}
+
+@keyframes frbelt-bottom{
+    20% { transform: translateY(30%) scaleX(1) scaleY(0); }
+    32% { transform: translateY(0) scaleX(1) scaleY(1); }
+    40% { transform: translateY(0) scaleX(0.9) scaleY(1); }
+    45% { transform: translateY(0) scaleX(1) scaleY(1); }
+    100% { transform: translateY(0) scaleX(1) scaleY(1); }
+}
+
+.show-back .buy .btn-fr .frbelt span::before{
+    animation: frbelt-left 2s;
+}
+
+@keyframes frbelt-left{
+    20% { transform: translateX(-46%) scaleX(0) scaleY(1); }
+    32% { transform: translateX(0) scaleX(1) scaleY(1); }
+    40% { transform: translateX(0) scaleX(1) scaleY(0.9); }
+    45% { transform: translateX(0) scaleX(1) scaleY(1); }
+    100% { transform: translateX(0) scaleX(1) scaleY(1); }
+}
+
+.show-back .buy .btn-fr .frbelt span::after{
+    animation: frbelt-right 2s;
+}
+
+@keyframes frbelt-right{
+    20% { transform: translateX(27%) scaleX(0) scaleY(1); }
+    32% { transform: translateX(0) scaleX(1) scaleY(1);}
+    40% { transform: translateX(0) scaleX(1) scaleY(0.9);}
+    45% { transform: translateX(0) scaleX(1) scaleY(1); }
+    100% { transform: translateX(0) scaleX(1) scaleY(1); }
+}
+
+.show-back .buy .btn-fr .bowknot{
+    animation: bowknot-zoom 2s;
+}
+
+@keyframes bowknot-zoom{
+    32% { transform: scale(0); }
+    40% { transform: scale(1.2); }
+    45% { transform: scale(1); }
+    100% { transform: scale(1); }
+}
+
+.show-back .buy .btn-fr .knot::before{
+    animation: knot-zoom 2s;
+}
+
+@keyframes knot-zoom{
+    32% { transform: scale(0); }
+    38% { transform: scale(1.2); }
+    43% { transform: scale(1); }
+    100% { transform: scale(1); }
+}
+
+/* animation show-back back */
+.show-back .back{
+    transform: rotateX(0);
+    animation: back-wait 1.5s;
+}
+
+@keyframes back-wait{
+    0% { transform:rotateX(180deg);}
+    30% { transform:rotateX(180deg);}
+    30.0001% { transform:rotateX(0);}
+    100% { transform: rotateX(0);}
+}
+
+.show-back .back .operation{
+    animation: op-move-left 2s;
+}
+
+@keyframes op-move-left{
+    0% { transform: translateX(70%);}
+    50% { transform: translateX(70%);}
+    75% { transform: translateX(0);}
+    100% { transform: translateX(0);}
+}
+
+.show-back .back .msg{
+    animation: opinput-opacity 2s;
+}
+
+@keyframes opinput-opacity{
+    0% { opacity: 0;}
+    60% { opacity: 0;}
+    100% { opacity: 1;}
+}
+
+.show-back .back .list p:nth-child(1){
+    animation: text-transform-1 2s;
+}
+
+@keyframes text-transform-1{
+    0% { transform: translateX(70%);opacity: 0; }
+    50% { transform: translateX(70%);opacity: 0; }
+    65% { transform: translateX(0);opacity: 1; }
+}
+
+.show-back .back .list p:nth-child(3){
+    animation: text-transform-2 2s;
+}
+
+@keyframes text-transform-2{
+    0% { transform: translateX(70%);opacity: 0; }
+    52% { transform: translateX(70%);opacity: 0; }
+    67% { transform: translateX(0);opacity: 1; }
+}
+
+.show-back .back .list p:nth-child(4){
+    animation: text-transform-3 2s;
+}
+
+@keyframes text-transform-3{
+    0% { transform: translateX(70%);opacity: 0; }
+    53% { transform: translateX(70%);opacity: 0; }
+    68% { transform: translateX(0);opacity: 1; }
+}
+
+.show-back .back .list p:nth-child(5){
+    animation: text-transform-4 2s;
+}
+
+@keyframes text-transform-4{
+    0% { transform: translateX(70%);opacity: 0; }
+    54% { transform: translateX(70%);opacity: 0; }
+    69% { transform: translateX(0);opacity: 1; }
+}
+
+.show-back .back .list p:nth-child(7){
+    animation: text-transform-5 2s;
+}
+
+@keyframes text-transform-5{
+    0% { transform: translateX(70%);opacity: 0; }
+    56% { transform: translateX(70%);opacity: 0; }
+    71% { transform: translateX(0);opacity: 1; }
+}

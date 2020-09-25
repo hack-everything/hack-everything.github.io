@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apple/Purchase</title>
+    <link rel="stylesheet" href="giftcard.css">
+    <link rel="stylesheet" href="apple.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<header>
+
+    <div class="container">
+        <i id="logo" class="fa fa-apple" aria-hidden="true"></i>
+        <nav>
+            <a href="">Mac</a>
+            <a href="">iPad</a>
+            <a href="">iPhone</a>
+            <a href="">Watch</a>
+            <a href="">TV</a>
+            <a href="">Music</a>
+            <a href="">Support</a>
+        </nav>
+        <div class="right">
+
+        </div>
+    </div>
+</header>
+<script src="https://use.fontawesome.com/c118aa5ce8.js"></script>
+
+</div>
+
+<div class="wrapper">
+    <div class="giftcard">
+        <div class="card">
+            <div class="back">
+                <section class="detail">
+                    <div class="list">
+                        <p class="title">Your order will be shipped to:</p>
+                        <p></p>
+                        <p class="name">Sourfruit</p>
+                        <p class="addr">26 Federal Plaza 23rd floor</p>
+                        <p class="addr">New York, NY 10278</p>
+                        <p></p>
+                        <p class="tip">Available to ship: (1) business day</p>
+                    </div>
+                </section>
+                <section class="operation">
+                    <div class="gift">
+                        <div class="btn-fr">
+                            <div class="gmask"></div>
+                            <div class="frbelt"><span></span></div>
+                            <div class="bowknot"><span></span></div>
+                            <div class="knot"></div>
+                        </div>
+                    </div>
+                    <input class="msg" placeholder="Enter a gift message" />
+                    <div class="checkout">
+                        <button id="checkout" onclick="buyCARD()">Checkout</button>
+                    </div>
+                </section>
+            </div>
+            <div class="front">
+                <section class="banner">
+                    <div class="logo-bg">
+                        <div class="wave">
+                            <div class="wave-bk"><span></span></div>
+                            <div class="wave-fr"><span></span></div>
+                        </div>
+                        <div class="logo apple"></div>
+                    </div>
+                </section>
+                <section class="info">
+                    <div class="list">
+                        <p class="title">Gift Card</p>
+                        <p class="price">$25.00</p>
+                    </div>
+                    <div class="buy">
+                        <div class="btn-bk">
+                            <div class="paper"></div>
+                            <div class="mask"></div>
+                        </div>
+                        <button id="buy">Buy</button>
+                        <div class="btn-fr">
+                            <div class="paper"><span></span></div>
+                            <div class="mask"></div>
+                            <div class="bkbelt"><span></span></div>
+                            <div class="gmask"></div>
+                            <div class="frbelt"><span></span></div>
+                            <div class="bowknot"><span></span></div>
+                            <div class="knot"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // With MacOS press option + shift + k could print char: 
+    // But the char can't show on windows.
+    // Just use font-awesome instead.
+
+    var btnBuy = document.getElementById('buy');
+    var btnCheckout = document.getElementById('checkout');
+    var card = document.querySelector('.giftcard');
+
+    function showBack() {
+        card.classList.add('show-back');
+        card.classList.remove('show-front');
+    }
+
+    function showFront() {
+        card.classList.remove('show-back');
+        card.classList.add('show-front');
+    }
+
+    function showFX() {
+        showBack();
+        setTimeout(showFront, 3000);
+    }
+
+    var timer = null;
+    var setTimer = function() {
+        timer = setInterval(showFX, 8000);
+    };
+    var clearTimer = function() {
+        clearInterval(timer);
+        timer = null;
+    };
+
+    btnBuy.addEventListener('click', function() {
+        showBack();
+    });
+    btnCheckout.addEventListener('click', function() {
+        showFront();
+    });
+
+    card.addEventListener('mouseenter', function() {
+        clearTimer();
+    });
+    card.addEventListener('mouseleave', function() {
+        setTimer();
+    });
+
+    setTimeout(showFX, 2000);
+    setTimer();
+
+
+
+
+</script>
+</body>
+</html>
