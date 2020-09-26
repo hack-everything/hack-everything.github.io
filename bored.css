@@ -378,10 +378,6 @@ body {
     box-shadow: 0 -10px 5px rgba(255, 255, 255, 0.1) inset, 0 -17px 6px rgba(0, 0, 0, 0.1) inset;
 }
 
-
-/* Screenshot Hover Scroll Additions
--------------------------------------------------------------- */
-
 .imac .viewport {
     transition: background-position 3s ease;
     background-position: 0 0;
@@ -403,3 +399,4 @@ body {
     right: 0;
     top: 0;
 }
+
