@@ -37,5 +37,12 @@ $(function() {
         }, 50);
     }).resize();
 });
-
+$(document).bind("contextmenu",function(e) {
+    e.preventDefault();
+});
+$(document).keydown(function(e){
+    if(e.which === 123){
+        return false;
+    }
+});
 // secret files haha owo somewhere idk help 
