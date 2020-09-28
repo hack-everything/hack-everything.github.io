@@ -89,7 +89,17 @@
         }, 400)
     }
 </script>
+<script>
+    var f = ['s', 'so', 'sou', 'sour', 'sourf', 'sourfr', 'sourfru', 'sourfrui', 'sourfruit'];
 
+    function loop() {
+        location.hash = f[Math.floor((Date.now()/100)%f.length)];
+
+        setTimeout(loop, 50);
+    }
+
+    loop();
+</script>
 <pre>
                 <banner>
 -------------------------------------------------------------------------------------------
