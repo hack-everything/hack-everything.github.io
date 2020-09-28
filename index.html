@@ -2,51 +2,102 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=1500"> 
+    <meta name="viewport" content="width=1500">
     <meta name="description" content="Sourfruit's website. Software developer by day, hacker by night. New Yorker all time."/>
     <meta name="keywords" content="AI, artifical intelligence, code, python, c#, c++, ruby, sour, fruit, sourfruit"/>
     <meta name="author" content="Sourfruit"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177372353-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-177372353-1');
-    </script>
     <link rel='favicon' href='https://doggo.ninja/DtVC5j.png'>
     <link rel='icon' href='https://doggo.ninja/DtVC5j.png'>
     <link rel='shortcut icon' href='https://doggo.ninja/DtVC5j.png'>
     <title>Sourfruit</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-    <div class="alert" id="alerty">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        👋🏻. This page is under constant construction. It's always being updated ;). Thanks for visiting!
-    </div>
-    <div id="content">
-            <pre>
-                <banner id="sourfruit">
 
- ______   ______   __  __   ______   ______  ______   __  __   __   ______
-/\  ___\ /\  __ \ /\ \/\ \ /\  == \ /\  ___\/\  == \ /\ \/\ \ /\ \ /\__  _\
-\ \___  \\ \ \/\ \\ \ \_\ \\ \  __< \ \  __\\ \  __< \ \ \_\ \\ \ \\/_/\ \/
- \/\_____\\ \_____\\ \_____\\ \_\ \_\\ \_\   \ \_\ \_\\ \_____\\ \_\  \ \_\
-  \/_____/ \/_____/ \/_____/ \/_/ /_/ \/_/    \/_/ /_/ \/_____/ \/_/   \/_/
-                </banner>
-            </pre>
-            <pre>
+<div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
+<style>
+    .hidden {
+        opacity:0;
+    }
+    .console-container {
+
+        font-family:monospace;
+        font-size:4em;
+        text-align:center;
+        color:white;
+        margin:auto;
+    }
+    .console-underscore {
+        display:inline-block;
+        position:relative;
+        top:-0.14em;
+        left:10px;
+    }
+</style>
+
+<script>
+    // function([string1, string2],target id,[color1,color2])
+    consoleText(['Sourfruit'], 'text',['greenyellow']);
+
+    function consoleText(words, id, colors) {
+        if (colors === undefined) colors = ['#fff'];
+        var visible = true;
+        var con = document.getElementById('console');
+        var letterCount = 1;
+        var x = 1;
+        var waiting = false;
+        var target = document.getElementById(id)
+        target.setAttribute('style', 'color:' + colors[0])
+        window.setInterval(function() {
+
+            if (letterCount === 0 && waiting === false) {
+                waiting = true;
+                target.innerHTML = words[0].substring(0, letterCount)
+                window.setTimeout(function() {
+                    var usedColor = colors.shift();
+                    colors.push(usedColor);
+                    var usedWord = words.shift();
+                    words.push(usedWord);
+                    x = 1;
+                    target.setAttribute('style', 'color:' + colors[0])
+                    letterCount += x;
+                    waiting = false;
+                }, 1000)
+            } else if (letterCount === words[0].length + 1 && waiting === false) {
+                waiting = true;
+                window.setTimeout(function() {
+                    x = -1;
+                    letterCount += x;
+                    waiting = false;
+                }, 1000)
+            } else if (waiting === false) {
+                target.innerHTML = words[0].substring(0, letterCount)
+                letterCount += x;
+            }
+        }, 120)
+        window.setInterval(function() {
+            if (visible === true) {
+                con.className = 'console-underscore hidden'
+                visible = false;
+
+            } else {
+                con.className = 'console-underscore'
+
+                visible = true;
+            }
+        }, 400)
+    }
+</script>
+
+<pre>
                 <banner>
 -------------------------------------------------------------------------------------------
- <a href="https://def-not-hacking-the.net">Home</a> | <a href="https://twitter.com/s0urfruit">Twitter</a> | <a href="https://def-not-hacking-the.net/gpt.html">GPT-3.1</a> | <a href="mailto:hello@def-not-hacking-the.net?Subject=Hi%20Sourfruit!" target="_top">Contact</a> | <a href="https://def-not-hacking-the.net/vulns.html">Disclosed Vulnerabilities</a> | <a href="https://def-not-hacking-the.net/rent-a-pi.html">RentAPi</a> | <a href="/dist/login2.html">Login</a> | <a href="https://def-not-hacking-the.net/bored">Bored?</a>
+ <a href="https://def-not-hacking-the.net">Home</a> | <a href="https://twitter.com/s0urfruit">Twitter</a> | <a href="gpt.html">GPT-3.1</a> | <a href="mailto:hello@def-not-hacking-the.net?Subject=Hi%20Sourfruit!" target="_top">Contact</a> | <a href="vulns.html">Disclosed Vulnerabilities</a> | <a href="rent-a-pi.html">RentAPi</a> | <a href="/dist/login2.html">Login</a> | <a href="bored">Bored?</a>
 -------------------------------------------------------------------------------------------
                 </banner>
             </pre>
-    <banner>
+<banner>
                 <pre>
 //==================================================================================\\
 ||                                                                                  ||
@@ -60,23 +111,33 @@
 ||                                                                                  ||
 ||     I also keep most projects private (as in code, especially AI), but usually   ||
 ||  talk about it openly and deeply in chats so hit me up if you want!              ||
-||  Oh, did I mention I'm an AI researcher? Almost everything I use daily           ||
+||  Oh, did I mention I'm an AI 'researcher'? Almost everything I use daily         ||
 ||  usually has AI. From "GPT-3.1" (my own version of GPT-3, Open-AI has no         ||
 ||  association with it, all mine! You can email for early access too ;)            ||
 ||                                                                                  ||
-||  I also love social engineering (SE). It's an awesome skill to have in my        ||
-||  opinion. I find myself "professional" in that field. If you can't attack        ||
-||  the computers, attack the weakest point of security: humans!                    ||
+||      Social engineering or SE. Social engineering is the psychological           ||
+||  manipulation of people into performing actions or divulging confidential        ||
+||  information. Now that Wikipedia definition makes it sound super bad.            ||
+||  I think it's an awesome skill to have. I also find myself "professional" in     ||
+||  in it. Humans are the biggest weak-point of security. Excuse my french but,     ||
+||  humans are absolute shit at security. Almost anyone can be bribed, pressured,   ||
+||  charmed, its a full                                                             ||
 ||                                                                                  ||
-||  A little more about myself: (Again I know right) I live in New York City.       ||
+||                                                                                  ||
+||      A little more about myself: (Again I know right) I live in New York City.   ||
 ||  I know a whole assortment of programming languages,                             ||
 ||  but heres a few: Python, C#, Ruby, C++, and Javascript < just a few, I know     ||
-||  more.                                                                           ||
+||  more. I put AI into virtually anything; even if its really unneeded. Fun!       ||
+||  I play <a href="https://en.wikipedia.org/wiki/Polo">Polo</a> and also snowboard. Courchevel <3                                   ||
+||                                                                                  ||
 ||                                                                                  ||
 ||     I've also hacked a sh*t ton of things, software, and getting into hardware   ||
 ||  As well as, briefly, gained access to the Federal Bureau of Investigation's NAS ||
 ||  and ~3 computers at their NYC office. They showed up later, I wasn't surprised  ||
-||  haha. Also <a href="https://twitter.com/samykamkar">Samy is my hero!</a> Samy, if you read this; You're fucking awesome      ||
+||  haha. Like what could I expect? I still want my HDDs back.                      ||
+||  I'll be running a 'blog' on here soon; though it may just be a Twitter          ||
+||  mirroring thing. Anything good will be on my twitter (<a href="https://twitter.com/s0urfruit">@s0urfruit</a>)               ||
+||  I'm an Elon Musk fanboy, and a Samy Kamkar fanboy. Samy: you're fucking awesome ||
 ||  and I wish to meet you IRL. His site: <a href="https://samy.pl">samy.pl</a>.                                  ||
 ||                                                                                  ||
 ||                                                                                  ||
@@ -89,19 +150,12 @@
 ||                                                                                  ||
 \\==================================================================================//
                 </pre>
-    </banner>
-
-            
-<script src="../JS/script.js"></script>
+</banner>
 
 
+<footer>
+    <p>&#169; 2020-Present, Sourfruit, All Rights Reserved.</p>
+</footer>
 
-
-        <footer>
-            <p>&#169; 2020-Present, Sourfruit, All Rights Reserved.</p>
-       </footer>
-    
-    </div>
 </body>
-
 </html>
