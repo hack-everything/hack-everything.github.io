@@ -1,12 +1,25 @@
-/* The alert message box */
+/*import font*/
+@import 'https://fonts.googleapis.com/css?family=Orbitron';
+
+
+banner {
+    text-align: center;
+    color: white;
+    font-family: monospace;
+}
+
+a {
+    color: greenyellow;
+}
+
+
 .alert {
     padding: 20px;
-    background-color: #f44336; /* Red */
+    background-color: greenyellow;
     color: white;
     margin-bottom: 15px;
 }
 
-/* The close button */
 .closebtn {
     margin-left: 15px;
     color: white;
@@ -18,7 +31,6 @@
     transition: 0.3s;
 }
 
-/* When moving the mouse over the close button */
 .closebtn:hover {
     color: black;
 }
@@ -49,11 +61,6 @@ banner {
     color: greenyellow;
 }
 
-
-a {
-    color: greenyellow;
-}
-
 a:hover {
     color: greenyellow;
 }
@@ -79,12 +86,5 @@ a:hover {
     font-size: 40px
 }
 
-button {
-    color: greenyellow;
-    background-color: #222222;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 12px;
-    padding: 12px 28px;
-    font-size: 16px;
-}
+
+
