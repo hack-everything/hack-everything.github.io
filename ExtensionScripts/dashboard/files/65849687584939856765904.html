@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +7,10 @@
     <meta name="keywords" content="AI, artifical intelligence, code, python, c#, c++, ruby, sour, fruit, sourfruit"/>
     <meta name="author" content="Sourfruit"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-
+    <link rel='favicon' href='https://doggo.ninja/DtVC5j.png'>
+    <link rel='icon' href='https://doggo.ninja/DtVC5j.png'>
+    <link rel='shortcut icon' href='https://doggo.ninja/DtVC5j.png'>
+    <title>Hackulator</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177372353-1"></script>
     <script>
@@ -16,89 +18,198 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'UA-177372353-1');
-    </script>
-    <link rel='favicon' href='https://doggo.ninja/DtVC5j.png'>
-    <link rel='icon' href='https://doggo.ninja/DtVC5j.png'>
-    <link rel='shortcut icon' href='https://doggo.ninja/DtVC5j.png'>
-    <title>Sourfruit</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
+    </script>v
+    <link rel="stylesheet" href="dashboard.css">
 </head>
-
 <body>
-<div id="content">
-            <pre>
-                <banner id="sourfruit">
+<div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
+<style>
+    .hidden {
+        opacity:0;
+    }
+    .console-container {
 
- _____     ______     ______     __  __     ______     ______     ______     ______     _____
-/\  __-.  /\  __ \   /\  ___\   /\ \_\ \   /\  == \   /\  __ \   /\  __ \   /\  == \   /\  __-.
-\ \ \/\ \ \ \  __ \  \ \___  \  \ \  __ \  \ \  __<   \ \ \/\ \  \ \  __ \  \ \  __<   \ \ \/\ \
- \ \____-  \ \_\ \_\  \/\_____\  \ \_\ \_\  \ \_____\  \ \_____\  \ \_\ \_\  \ \_\ \_\  \ \____-
-  \/____/   \/_/\/_/   \/_____/   \/_/\/_/   \/_____/   \/_____/   \/_/\/_/   \/_/ /_/   \/____/
+        font-family:monospace;
+        font-size:4em;
+        text-align:center;
+        color:white;
+        margin:auto;
+    }
+    .console-underscore {
+        display:inline-block;
+        position:relative;
+        top:-0.14em;
+        left:10px;
+    }
+</style>
 
-                </banner>
-            </pre>
-    <pre>
-                <banner>
-------------------------------------------------------------------------------------
- <a href="https://def-not-hacking-the.net">Home</a> | <a href="https://twitter.com/s0urfruit">Twitter</a> | <a href="https://def-not-hacking-the.net/gpt.html">GPT-3.1</a> | <a href="mailto:hello@def-not-hacking-the.net?Subject=Hi%20Sourfruit!" target="_top">Contact</a> | <a href="https://def-not-hacking-the.net/vulns.html">Disclosed Vulnerabilities</a> | <a href="https://def-not-hacking-the.net/rent-a-pi.html">RentAPi</a> | <a href="/dist/login2.html">Login</a>
-------------------------------------------------------------------------------------
-                </banner>
-            </pre>
-    <banner>
-        <h3> If you're an 'attacker'; congrats! You gained access to absolutley nothing useful. </h3>
-        <h3>Well, unless you find a link to Google Analytics, and some other minor things useful.</h3>
-        <h3>Also the credentials (sourfruit & sourfruit99) are not used anywhere; but here. :)</h3></h2>
-        <h3> I ♥️ Base64 </h3>
-              <br>
-        <br>
-                <pre>
-                </pre>
-    </banner>
-<a href="https://analytics.google.com/analytics/web/"><button>Google Analytics</button></a>
-    <br>
-    <br>
-<a href="https://twitter.com/s0urfruit"><button>Twitter</button></a>
-    <br>
-    <br>
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button>Secret Files</button></a>
-    <script src="script.js"></script>
-
-
-<br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <br>
-    <br>
-    <footer>
-        <p>&#169; 2020-Present, Sourfruit, All Rights Reserved.</p>
-    </footer>
-
-</div>
-    
-<script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
 <script>
-    function SaveAsFile(t,f,m) {
-        try {
-            var b = new Blob([t],{type:m});
-            saveAs(b, f);
-        } catch (e) {
-            window.open("data:"+m+"," + encodeURIComponent(t), '_blank','');
+    // function([string1, string2],target id,[color1,color2])
+    consoleText(['Sourfruit'], 'text',['greenyellow']);
+
+    function consoleText(words, id, colors) {
+        if (colors === undefined) colors = ['#fff'];
+        var visible = true;
+        var con = document.getElementById('console');
+        var letterCount = 1;
+        var x = 1;
+        var waiting = false;
+        var target = document.getElementById(id)
+        target.setAttribute('style', 'color:' + colors[0])
+        window.setInterval(function() {
+
+            if (letterCount === 0 && waiting === false) {
+                waiting = true;
+                target.innerHTML = words[0].substring(0, letterCount)
+                window.setTimeout(function() {
+                    var usedColor = colors.shift();
+                    colors.push(usedColor);
+                    var usedWord = words.shift();
+                    words.push(usedWord);
+                    x = 1;
+                    target.setAttribute('style', 'color:' + colors[0])
+                    letterCount += x;
+                    waiting = false;
+                }, 1000)
+            } else if (letterCount === words[0].length + 1 && waiting === false) {
+                waiting = true;
+                window.setTimeout(function() {
+                    x = -1;
+                    letterCount += x;
+                    waiting = false;
+                }, 1000)
+            } else if (waiting === false) {
+                target.innerHTML = words[0].substring(0, letterCount)
+                letterCount += x;
+            }
+        }, 120)
+        window.setInterval(function() {
+            if (visible === true) {
+                con.className = 'console-underscore hidden'
+                visible = false;
+
+            } else {
+                con.className = 'console-underscore'
+
+                visible = true;
+            }
+        }, 400)
+    }
+</script>
+<CENTER>
+<pre>
+                <banner>
+-------------------------------------------------------------------------------------------
+ <a href="https://def-not-hacking-the.net" id="bar">Home</a> | <a href="https://twitter.com/s0urfruit" id="bar">Twitter</a> | <a href="gpt.html" id="bar">GPT-3.1</a> | <a href="mailto:hello@def-not-hacking-the.net?Subject=Hi%20Sourfruit!" target="_top" id="bar">Contact</a> | <a href="vulns.html" id="bar">Disclosed Vulnerabilities</a> | <a href="rent-a-pi.html" id="bar">RentAPi</a> | <a href="/dist/login2.html" id="bar">Login</a> | <a href="bored" id="bar">Bored?</a>
+-------------------------------------------------------------------------------------------
+                </banner>
+            </pre>
+</CENTER>
+<section id="code"></section>
+<script>
+    let intervalID = window.setInterval(updateScreen, 400)
+    let c = document.querySelector('#code')
+
+    let txt = [
+        'FORCE: XX0022. ENCYPT://000.222.2345',
+        'TRYPASS: ********* AUTH CODE: ALPHA GAMMA: 1___ PRIORITY 1',
+        'RETRY: REINDEER FLOTILLA',
+        'Z:> /FALKEN/GAMES/TICTACTOE/ EXECUTE -PLAYERS 0',
+        '================================================',
+        'Priority 1 // local / scanning...',
+        'scanning ports...',
+        'BACKDOOR FOUND (23.45.23.12.00000000)',
+        'BACKDOOR FOUND (13.66.23.12.00110000)',
+        'BACKDOOR FOUND (13.66.23.12.00110044)',
+        '...',
+        '...',
+        'BRUTE.EXE -r -z',
+        '...locating vulnerabilities...',
+        '...vulnerabilities found...',
+        'MCP/> DEPLOY CLU',
+        'SCAN: __ 0100.0000.0554.0080',
+        'SCAN: __ 0020.0000.0553.0080',
+        'SCAN: __ 0001.0000.0554.0550',
+        'SCAN: __ 0012.0000.0553.0030',
+        'SCAN: __ 0100.0000.0554.0080',
+        'SCAN: __ 0020.0000.0553.0080',
+        'FFF BJDY **** ++home hack',
+        'BACKDOOR FOUND (23.45.23.12.00000000)',
+        'BACKDOOR FOUND (13.66.23.12.00110000)',
+        'BACKDOOR FOUND (13.66.23.12.00110044)',
+        '=============================================',
+        '...',
+        '...',
+        'BRUTE.EXE -r -z',
+        '...locating vulnerabilities...',
+        '...vulnerabilities found...',
+        '...',
+        '...',
+        '     ',
+        'HACKED  HACKED  HACKED  HACKED',
+        '...',
+        '...',
+        '     ',
+        'FIREWALL BREACHED  FIREWALL BREACHED  FIREWALL BREACHED',
+        '...',
+        '...',
+        '     ',
+        'HACKED  HACKED  HACKED  HACKED',
+        '...',
+        '...',
+        '     ',
+        'FIREWALL BREACHED  FIREWALL BREACHED  FIREWALL BREACHED',
+        '...',
+        '...',
+        '     ',
+        'HACKED  HACKED  HACKED  HACKED',
+        '...',
+        '...',
+        '...',
+        '...',
+        'Priority 2 // local / scanning...',
+        'scanning ports...',
+        'BACKDOOR FOUND (23.45.23.12.00000000)',
+        'BACKDOOR FOUND (13.66.23.12.00110000)',
+        'BACKDOOR FOUND (13.66.23.12.00110044)',
+        '...',
+        '...',
+        'BRUTE.EXE -r -z',
+        '...locating vulnerabilities...',
+        '...vulnerabilities found...',
+        'MCP/> DEPLOY CLU',
+        'SCAN: __ 0100.0000.0554.0080',
+        'SCAN: __ 0020.0000.0553.0080',
+        'SCAN: __ 0001.0000.0554.0550',
+        'SCAN: __ 0012.0000.0553.0030',
+        'SCAN: __ 0100.0000.0554.0080',
+        'SCAN: __ 0020.0000.0553.0080',
+        'FFF BJDY **** ++home hack',
+        'BACKDOOR FOUND (23.45.23.12.00000000)',
+        'BACKDOOR FOUND (13.66.23.12.00110000)',
+        'BACKDOOR FOUND (13.66.23.12.00110044)',
+        '=============================================',
+
+
+    ]
+
+    let docfrag = document.createDocumentFragment()
+
+    function updateScreen() {
+        txt.push(txt.shift())
+        txt.forEach((e)=>{
+            let p =document.createElement('p')
+            p.textContent = e
+            docfrag.appendChild(p)
+        })
+        while(c.firstChild) {
+            c.removeChild(c.firstChild)
         }
+        c.appendChild(docfrag)
     }
 
-    SaveAsFile("T2ggaGVsbG8gdGhlcmUhIFlvdSdyZSBhdCB0aGUgc3RhcnQgb2Ygc29tZXRoaW5nIGdyZWF0LiBUaGlzIGlzIGVuY29kZWQgaW4gQmFzZTY0IGJ0dyA6KS4gCgoKCgoKSSBoZWFyZCAiaHR0cHM6Ly90aGUtdGVzdGluZy1mb25kLmdpdGh1Yi5pbyIgaXMgYSBnb29kIHNpdGUgdG8gY2hlY2s/","notyetsecret.txt","text/plain;charset=utf-8");
 
 </script>
-    <script src="script.js"></script>
+<script> src="index.js" </script>
 </body>
-
 </html>
