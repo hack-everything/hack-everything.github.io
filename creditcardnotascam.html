@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>check your credit card</title>
+    <link rel="stylesheet" href="creditcardnotascam.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body>
+<div class="overlaycontainer hidden" id="overlay">
+    <div id="close" onclick="hideShown()"><i class="fas fa-times"></i></div>
+    <h1>Your card has not been stolen!!!!</h1>
+    <p>Thank you for checking your card with us</p>
+    <img src="https://images.emojiterra.com/google/android-nougat/512px/1f44c.png">
+</div>
+<div class="container">
+    <marquee behavior="alternate" BGCOLOR="orange">YOUR INFORMATION MIGHT HAVE BEEN STOLEN! CHECK NOW!</marquee>
+    <h1>CHECK IF YOUR CREDIT CARD HAS BEEN STOLEN!!!!!!!</h1>
+    <form class="cardfield">
+        <label>Credit Card Number</label>
+        <input type="text" name="cardnumber" maxlength="16" placeholder="1234 5678 9012 3456">
+        <div class="form-group" id="expiration-date">
+            <label>Expiration Date</label>
+            <select>
+                <option>January</option>
+                <option>February </option>
+                <option>March</option>
+                <option>April</option>
+                <option>May</option>
+                <option>June</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+            </select>
+            <select>
+                <option> 2013</option>
+                <option> 2014</option>
+                <option> 2015</option>
+                <option> 2016</option>
+                <option> 2017</option>
+                <option> 2018</option>
+                <option> 2019</option>
+                <option> 2020</option>
+                <option> 2021</option>
+            </select>
+        </div>
+        <label>CCV</label>
+        <input id="ccv" type="text" maxlength="3" name="cardnumber" placeholder="420">
+    </form>
+    <button onclick="showHidden()" class="submitbutton" id="buttonSubmit">Check if you've been hacked!!!!</button>
+    <img class="totallysecure" src="http://sbstools.com/content/images/thumbs/0000042_thawte-ssl-certificate-ssl123_300.gif">
+</div>
+<script>
+    function showHidden() {
+        console.log ("show")
+        document.getElementById("overlay").classList.add('shown');
+        document.getElementById("overlay").classList.remove('hidden');
+    }
+
+    function hideShown() {
+        console.log ("hide")
+        document.getElementById("overlay").classList.add('hidden');
+        document.getElementById("overlay").classList.remove('shown');
+    }
+</script>
+</body>
+</html>
