@@ -20,12 +20,32 @@
     <link rel='shortcut icon' href='https://doggo.ninja/DtVC5j.png'>
     <title>Sourfruit</title>
     <link rel="stylesheet" href="index.css">
-    <meta http-equiv="refresh" content="0; URL=https://loading.def-not-hacking-the.net" />
     <meta http-equiv="refresh" content="3500;url=https://m.def-not-hacking-the.net" />
     
 </head>
 <body>
+<script>
+    if (getCookie("sourfruit_first_visit") != "true") {
+        document.cookie = "sourfruit_first_visit=true";
+        location.href="https://loading.def-not-hacking-the.net";
+    }
 
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length,c.length);
+            }
+        }
+        return "";
+    }
+</script>
 <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
 <style>
     .hidden {
