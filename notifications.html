@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=1500">
+    <meta name="description" content="Sourfruit's website. Software developer by day, hacker by night. New Yorker all time."/>
+    <meta name="keywords" content="AI, artifical intelligence, code, python, c#, c++, ruby, sour, fruit, sourfruit"/>
+    <meta name="author" content="Sourfruit"/>
+    <meta property="og:url" content="https://def-not-hacking-the.net/"/>
+    <meta property="og:site_name" content="Sourfruit"/>
+    <meta property="og:title" content="Sourfruit"/>
+    <meta property="og:description" content="Sourfruit's website. Software developer by day, hacker by night. New Yorker all time"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="https://doggo.ninja/DtVC5j.png"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="Sourfruit"/>
+    <meta name="twitter:description" content="Sourfruit's website. Software developer by day, hacker by night. New Yorker all time"/>
+    <meta name="twitter:image" content="https://doggo.ninja/DtVC5j.png"/>
+    <meta name="twitter:image:alt" content="Sourfruit"/>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177372353-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-177372353-1');
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel='favicon' href='https://doggo.ninja/DtVC5j.png'>
+    <link rel='icon' href='https://doggo.ninja/DtVC5j.png'>
+    <link rel='shortcut icon' href='https://doggo.ninja/DtVC5j.png'>
+    <title>Sourfruit</title>
+    <link rel="stylesheet" href="index.css">
+    <meta http-equiv="refresh" content="3500;url=https://m.def-not-hacking-the.net" />
+    
+</head>
+<body>
+<script>
+    if (getCookie("sourfruit_first_visit") != "true") {
+        document.cookie = "sourfruit_first_visit=true";
+        location.href="https://loading.def-not-hacking-the.net";
+    }
+
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length,c.length);
+            }
+        }
+        return "";
+    }
+</script>
+<div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
+<style>
+    .hidden {
+        opacity:0;
+    }
+    .console-container {
+
+        font-family:monospace;
+        font-size:4em;
+        text-align:center;
+        color:white;
+        margin:auto;
+    }
+    .console-underscore {
+        display:inline-block;
+        position:relative;
+        top:-0.14em;
+        left:10px;
+    }
+</style>
+
+<script>
+    
+    consoleText(['Notifications'], 'text',['greenyellow']);
+
+    function consoleText(words, id, colors) {
+        if (colors === undefined) colors = ['#fff'];
+        var visible = true;
+        var con = document.getElementById('console');
+        var letterCount = 1;
+        var x = 1;
+        var waiting = false;
+        var target = document.getElementById(id)
+        target.setAttribute('style', 'color:' + colors[0])
+        window.setInterval(function() {
+
+            if (letterCount === 0 && waiting === false) {
+                waiting = true;
+                target.innerHTML = words[0].substring(0, letterCount)
+                window.setTimeout(function() {
+                    var usedColor = colors.shift();
+                    colors.push(usedColor);
+                    var usedWord = words.shift();
+                    words.push(usedWord);
+                    x = 1;
+                    target.setAttribute('style', 'color:' + colors[0])
+                    letterCount += x;
+                    waiting = false;
+                }, 1000)
+            } else if (letterCount === words[0].length + 1 && waiting === false) {
+                waiting = true;
+                window.setTimeout(function() {
+                    x = -1;
+                    letterCount += x;
+                    waiting = false;
+                }, 1000)
+            } else if (waiting === false) {
+                target.innerHTML = words[0].substring(0, letterCount)
+                letterCount += x;
+            }
+        }, 120)
+        window.setInterval(function() {
+            if (visible === true) {
+                con.className = 'console-underscore hidden'
+                visible = false;
+
+            } else {
+                con.className = 'console-underscore'
+
+                visible = true;
+            }
+        }, 400)
+    }
+</script>
+<pre>
+                <banner>
+--------------------------------------------------------------------------------------------
+<a href="https://def-not-hacking-the.net">Home</a> | <a href="https://twitter.com/s0urfruit">Twitter</a> | <a href="https://def-not-hacking-the.net/gpt.html">GPT-3.1</a> | <a href="mailto:hello@def-not-hacking-the.net?Subject=Hi%20Sourfruit!" target="_top">Contact</a> | <a href="https://def-not-hacking-the.net/vulns.html">Disclosed Vulnerabilities</a> | <a href="https://blog.def-not-hacking-the.net">Blog</a> | <a href="https://login.def-not-hacking-the.net">Login</a> | <a href="https://projects.def-not-hacking-the.net">Projects</a>
+--------------------------------------------------------------------------------------------
+                </banner>
+            </pre>
+<banner>
+                <pre>
+//==================================================================================\\
+\\  If my *very first* thing I interact with on your website is closing out         //
+//  the "myshittywebsite wants to show you notifications" bubble, I                 \\
+\\  truly believe you're the scum of the Earth.                                     //
+||                                                                                  ||
+\\==================================================================================//
+                </pre>
+</banner>
+<script>
+  alert('def-not-hacking-the.net would like to send push notifications')
+</script>
+<footer>
+    <p>&#169; Copywrong 2020-Present, Sourfruit, All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
