@@ -22,7 +22,7 @@ console.log('      ');
 
 console.log(' You found Easter Egg #1 ');
 
-var randomcookie = Math.floor((Math.random() * 100000) + 2);
+var randomcookie = Math.floor((Math.random() * 10044000) + 234456);
 document.cookie = randomcookie;
 // fuck youuuuuuuu
 document.cookie = randomcookie;
